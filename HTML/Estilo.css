@@ -8,12 +8,13 @@
 /* Container principal */
 .container {
     display: flex;
+    overflow: hidden;
     height: 100vh;
 }
 
 
 .titulo{
-    color: #333;
+    text-align: center;
 }
 
 .notas {
@@ -22,6 +23,7 @@
     justify-content: center;
     padding-bottom: 20px;
 }
+
 /* Lado esquerdo (formulário) */
 .left-side {
     width: 475px; /* Largura aproximada de um iPhone 15 */
@@ -30,7 +32,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #333;
     background-color: #f4f4f4;
+    
+}
+
+.left-side-swapp{
+    width: 475px; /* Largura aproximada de um iPhone 15 */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #3d3d3d;
+    color: white;
 }
 
 /* Formulário */
@@ -67,12 +82,29 @@ input[type="text"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #f7221f;
+    background-color: #ffe100;
 }
+
+
+.float-button button{
+    
+    padding: 4%;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: #ffe100;
+}
+
+.float-button{
+    position: relative;
+    left: 90%;
+    top: 70px;
+}
+
 
 /* Efeito de hover nos botões */
 button:hover {
-    background-color: #333;
+    background-color: #e7cc00;
     color: white;
 }
 
@@ -89,7 +121,7 @@ button:hover {
     background-color: #222;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
 .right-side img {
@@ -201,3 +233,11 @@ footer {
 }
 
 /* Outros estilos seguem o já implementado anteriormente */
+
+ /* Flexbox inverte os lados */
+.container.swapped {
+    flex-direction: row-reverse;
+}
+
+      
+
